@@ -10,7 +10,6 @@
 
 // if == 5 place 3s
 
-// else == 3 || > 5 place 5s
 var getDecent = function(x){
 	var output = "",
 		length = x;
@@ -32,5 +31,23 @@ var getDecent = function(x){
 	return output;
 }
 
+var madDecent = function(y){
+	
+	var nums = y.split("\n"),
+		numsL = nums.length,
+		counter = 1;
+
+	while(numsL > 1){
+		console.log(getDecent(nums[counter]));
+		--numsL; 
+		++counter;
+	}	
+
+		
+}
+
 var input = 11;
-console.log(getDecent(input));
+//console.log(getDecent(input));
+
+var inputR = "4\n3\n5\n11\n2";
+madDecent(inputR);
